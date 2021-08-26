@@ -1,4 +1,4 @@
-let arrayTest = [8, 2 , 3, 4, 5]
+let arrayTest = [8, 2 , 3, 4, 5, 12]
 
 
 function newForEach(array, callback){
@@ -31,5 +31,17 @@ function newMap(array, callback){
         output.push(callback(array[indice]))    
     }
     return output
+
+}
+
+function newSome(array, callback){
+
+    for(let indice = 0; indice < array.length; indice++){
+        if(callback(array[indice])){
+            return true
+        }
+         
+    }
+    return false
 
 }
