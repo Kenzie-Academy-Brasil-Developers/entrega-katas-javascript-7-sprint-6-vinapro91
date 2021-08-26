@@ -45,3 +45,14 @@ function newSome(array, callback){
     return false
 
 }
+
+function newFind(array, callback){
+    
+    for(let indice = 0; indice < array.length; indice++){
+        if(callback(array[indice])){
+            return array[indice]
+        }
+         
+    }
+    return 
+}
