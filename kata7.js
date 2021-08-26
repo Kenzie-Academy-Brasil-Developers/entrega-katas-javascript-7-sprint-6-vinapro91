@@ -56,3 +56,14 @@ function newFind(array, callback){
     }
     return 
 }
+
+function newFindIndex(array, callback){
+    
+    for(let indice = 0; indice < array.length; indice++){
+        if(callback(array[indice])){
+            return indice
+        }
+         
+    }
+    return 
+}
